@@ -1,0 +1,156 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef3eb;
+}
+
+.weather-app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.weather-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px #30433015;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 8px;
+  color: #304330;
+  font-size: 32px;
+}
+
+.subtitle {
+  margin-bottom: 28px;
+  color: #777;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #d8dfd3;
+  border-radius: 10px;
+  font-size: 15px;
+  outline-color: #869373;
+}
+
+button {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #304330;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.weather-result {
+  margin-top: 28px;
+}
+
+.weather-result h2 {
+  color: #304330;
+  font-size: 23px;
+}
+
+.weather-icon {
+  margin-top: 18px;
+  font-size: 70px;
+}
+
+.temperature {
+  margin: 8px 0;
+  color: #304330;
+  font-size: 52px;
+}
+
+.condition {
+  margin: 8px 0;
+  font-size: 19px;
+  color: #52634b;
+}
+
+.feels-like {
+  color: #777;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.detail {
+  padding: 16px 8px;
+  background: #f0f4ed;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.detail span {
+  font-size: 24px;
+}
+
+.detail p {
+  color: #777;
+  font-size: 13px;
+}
+
+.detail strong {
+  color: #304330;
+  font-size: 14px;
+}
+
+.error-message {
+  margin-top: 20px;
+  color: #bd3030;
+}
+
+.status-message,
+.empty-message {
+  margin-top: 25px;
+  color: #777;
+}
+
+@media (max-width: 450px) {
+  .weather-card {
+    padding: 22px 16px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .weather-details {
+    gap: 6px;
+  }
+
+  .detail {
+    padding: 12px 4px;
+  }
+}
